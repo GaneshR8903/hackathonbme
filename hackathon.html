@@ -18,7 +18,30 @@
     <header>
       <div class="header-content">
         <h1>Biomedical Engineering Hackathon</h1>
-        <p>Welcome to our SCHWAN TECH 2K24 Hackathon Event!</p>
+        <h2>Arriving soon</h2>
+        <br /><br />
+        <div class="launch-time">
+          <div class="timer-box">
+            <p id="days">00</p>
+            <span>Days</span>
+          </div>
+          <div class="timer-box">
+            <p id="hours">00</p>
+            <span>Hours</span>
+          </div>
+          <div class="timer-box">
+            <p id="minutes">00</p>
+            <span>Minutes</span>
+          </div>
+          <div class="timer-box">
+            <p id="seconds">00</p>
+            <span>Seconds</span>
+          </div>
+        </div>
+        <div class="contents">
+          <br /><br /><br /><br />
+          <p>SCHWAN TECH 2K24 Hackathon Event!</p>
+        </div>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
@@ -29,6 +52,36 @@
         </nav>
       </div>
     </header>
+
+    <script>
+      function formatTime(value) {
+        return value < 10 ? "0" + value : value;
+      }
+    
+      var countDownDate = new Date("March 27, 2024 00:00:00").getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+    
+        var days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
+        var hours = formatTime(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        var minutes = formatTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+        var seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
+    
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+    
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("days").innerHTML = "00";
+          document.getElementById("hours").innerHTML = "00";
+          document.getElementById("minutes").innerHTML = "00";
+          document.getElementById("seconds").innerHTML = "00";
+        }
+      }, 1000);
+    </script>
 
     <section id="about">
       <h2>About</h2>

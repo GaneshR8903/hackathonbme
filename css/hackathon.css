@@ -1,12 +1,12 @@
-body {
+dy {
   font-family: "Times New Roman", sans-serif;
   line-height: 1.6;
   color: #fff;
   margin: 0;
   padding: 0;
   animation: rollIn 1.5s ease-out;
-  overflow: auto; /* Hide the horizontal scrollbar */
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -19,11 +19,16 @@ header {
   width: 100%;
   height: 100%;
   filter: brightness(50%);
-  background: url("images/background_image.jpg") center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+.header-content h2 {
+  font-size: 50px;
 }
 
 .header-content {
@@ -31,38 +36,60 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #dddf6a; /* Set the text color to white */
+  color: #15bb0f;
   z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+.launch-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
-header h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
-  color: #e5b200;
+.timer-box {
+  text-align: center;
+  margin: 20px; /* Adjusted margin */
+  display: flex;
+  flex-direction: column; /* Display the timer vertically */
+  align-items: center;
+  width: 30px;
 }
 
-header p {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #e5b200;
+.timer-box p {
+  font-size: 36px;
+  margin-bottom: 5px;
+  background-color: #6c0f9e;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffcc00;
 }
 
-/* Define a keyframe animation for the rolling effect */
+.timer-box span {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+}
+
 @keyframes rollIn {
   from {
-    transform: translateY(100vh); /* Move the content below the viewport */
+    transform: translateY(100vh);
   }
   to {
-    transform: translateY(0); /* Bring the content to its normal position */
+    transform: translateY(0);
   }
 }
-
-/* Apply the rolling animation to the body */
 
 header h1.glow {
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
-  color: #00ff00; /* Adjusted glow color to match the header */
+  color: #00ff00;
 }
 
 header img.start-image {
@@ -73,8 +100,8 @@ header img.start-image {
 }
 
 .start-button {
-  background-color: #e5b200; /* Adjusted button color */
-  color: #fff; /* Button text color */
+  background-color: #e5b200;
+  color: #fff;
 }
 
 .start-button:hover {
@@ -101,7 +128,7 @@ nav a {
   display: block;
   padding: 15px 30px;
   background-color: #ffcc00;
-  color: #000;
+  color: #090808;
   text-decoration: none;
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -112,25 +139,30 @@ nav a:hover {
 }
 
 .header-content h1 {
-  font-size: 4rem; /* Increase the font size */
-  color: #06f8c4; /* Set the color to a prominent one */
-  font-weight: bold; /* Make the text bold */
-  font-style: italic; /* Apply italic style */
+  font-size: 4rem;
+  color: #06f8c4;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .header-content p {
-  font-size: 2rem; /* Adjust the font size for the subtitle */
-  color: #ebeff0; /* Set the color for the subtitle */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #3fbb19;
+  text-align: center;
 }
-
+.contents p {
+  color: #0bed47;
+  margin-top: 10px;
+}
 section {
   text-align: center;
-  background-color: #240046; /* Attractive color for the sections */
+  background-color: #240046;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 50px;
-  min-height: 500px; /* Increase the height of the sections */
+  min-height: 500px;
 }
 
 section img {
@@ -160,48 +192,48 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 40px; /* Increased space after the image */
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .step {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px; /* Increased width */
-  height: 150px; /* Increased height */
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: #3498db; /* Darker blue color */
+  background-color: #3498db;
   color: #fff;
-  margin: 20px; /* Increased space between options */
+  margin: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 1.6em; /* Increased font size */
+  font-size: 1.6em;
 }
 
 .step:hover {
-  background-color: #2980b9; /* Slightly darker blue on hover */
+  background-color: #2980b9;
 }
 
 .step.active {
-  background-color: #2c3e50; /* Darker gray for active step */
+  background-color: #2c3e50;
 }
 
 #details-container {
-  margin-top: 40px; /* Increased space between options and details container */
+  margin-top: 40px;
   padding: 20px;
   border: 2px solid #2c3e50;
   border-radius: 10px;
-  background-color: #fff; /* White background */
-  color: #2c3e50; /* Dark gray text color */
+  background-color: #fff;
+  color: #2c3e50;
   position: relative;
   z-index: 2;
 }
 
 .step-with-image {
   position: relative;
-  height: 300px; /* Adjust the height as needed */
-  width: 100%; /* Set the width to 100% to cover the entire width of the container */
+  height: 300px;
+  width: 100%;
   margin: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -224,7 +256,7 @@ section h2 {
     transform: translateX(-50);
   }
   100% {
-    transform: translateX(100%); /* Adjust the distance to control the speed */
+    transform: translateX(100%);
   }
 }
 
@@ -260,6 +292,24 @@ section p {
 
 @media only screen and (max-width: 300px) {
   .background-image {
-    background-size: contain; /* Adjust the background size for mobile devices */
+    background-size: contain;
   }
+}
+
+.content {
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.content h1 span {
+  color: #ff3753;
 }

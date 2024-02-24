@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biomedical Engineering Hackathon</title>
+    <link rel="stylesheet" href="css/hackathon.css" />
+  </head>
+
+  <body id="main-content">
+    <div
+      class="background-images"
+      style="
+        background: url('images/background_image.jpg') center/cover no-repeat
+          fixed;
+      "
+    ></div>
+    <header>
+      <div class="header-content">
+        <h1>Biomedical Engineering Hackathon</h1>
+        <p>Welcome to our SCHWAN TECH 2K24 Hackathon Event!</p>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <video controls poster="images/about_image.jpg">
+        <source src="videos/about_video.mp4" type="video/mp4" />
+        <track
+          kind="description"
+          src="videos/description.vtt"
+          label=""
+          srclang="en"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <p>
+        The Biomedical Engineering Hackathon is a 24-hour event that brings
+        together students, professionals, and enthusiasts in the field of
+        biomedical engineering to create innovative solutions to real-world
+        healthcare challenges.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <img src="images/schedule_image.jpg" alt="About Content" />
+      <div class="flow-path">
+        <div class="step" onclick="showDetails(1)" data-step="1">
+          Registration and Opening Ceremony
+        </div>
+        <div class="step" onclick="showDetails(2)" data-step="2">
+          Team Formation and Idea Pitches
+        </div>
+        <div class="step" onclick="showDetails(3)" data-step="3">
+          Workshop, and Mentoring Sessions
+        </div>
+        <div class="step" onclick="showDetails(4)" data-step="4">
+          Project Submission
+        </div>
+        <div class="step" onclick="showDetails(5)" data-step="5">
+          Judging, Evaluation and Awards
+        </div>
+      </div>
+      <div id="details-container">
+        <!-- Details for each step will be displayed here -->
+      </div>
+    </section>
+
+    <section id="register">
+      <h2>Register</h2>
+      <img src="images/register_image.jpg" alt="Register" />
+      <p>
+        Ready to join the Biomedical Engineering Hackathon? Register now to
+        secure your spot and start brainstorming your innovative solution!
+      </p>
+      <button id="registerButton" class="button">Register Now</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or queries, feel free to reach out to us.</p>
+      <p>Email: bme@gmail.com</p>
+      <p>Phone: +91 1234567890</p>
+      <!-- You can add more contact details as needed -->
+    </section>
+
+    <script src="js/hackathon.js"></script>
+  </body>
+</html>

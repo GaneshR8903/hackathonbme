@@ -1,24 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Add click event listener to the Register Now button
   const registerButton = document.getElementById("registerButton");
   if (registerButton) {
-    registerButton.addEventListener("click", function () {
-      // Redirect to the specified link
-      window.location.href = "https://forms.gle/Grgoa4jVEWgjNFfC7";
+    registerButton.addEventListener("click", function () { 
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeWxHu_aL7J_CAGwXNn3s5YOO1M0DAmjml87xDj3pF8iA-fcg/viewform";
     });
   }
-
-  // Add the loaded class to the body to trigger the fade-in effect
   document.body.classList.add("loaded");
 });
-// Add click event listener to the Register Now button
-const registerButton = document.getElementById("registerButton");
-if (registerButton) {
-  registerButton.addEventListener("click", function () {
-    // Redirect to the specified link
-    window.location.href = "https://forms.gle/Grgoa4jVEWgjNFfC7";
-  });
-}
+
 
 function showDetails(stepNumber) {
   let detailsContainer = document.getElementById("details-container");
@@ -77,7 +66,7 @@ function showDetails(stepNumber) {
     step.classList.remove("active");
   });
 
-  // Add active class to the clicked step
+
   const clickedStep = document.querySelector(
     `.step[data-step="${stepNumber}"]`
   );

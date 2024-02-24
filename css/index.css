@@ -7,6 +7,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.fade-out {
+  transition: opacity 1s ease; 
+  opacity: 0;
+  background-color: black;
+}
+
 
 .start-image {
   opacity:0.6;

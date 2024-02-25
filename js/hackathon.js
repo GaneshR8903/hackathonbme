@@ -61,7 +61,6 @@ function showDetails(stepNumber) {
       detailsContainer.innerHTML = `<p style='color: green;'>${details}</p>`;
   }
 
-  // Remove active class from all steps
   document.querySelectorAll(".step").forEach((step) => {
     step.classList.remove("active");
   });

@@ -15,20 +15,19 @@ function showDetails(stepNumber) {
 
   switch (stepNumber) {
     case 1:
-      details =
-        "Registration Ends at 12/03/2024.";
+      details = "Registration Ends at 12/03/2024.";
       detailsContainer.innerHTML = `
         <div class='step-with-image'>
-          <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
-          <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+          <img src='images/register1_image.jpg' alt='Registration Image' class='background-image' />
+          <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
         </div>`;
       break;
     case 2:
-      details = "Assessment will be updated";
+      details = "Assessments will be conducted from 13/03/2024 to 15/03/2024";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/Teamsmall_image.jpg' alt='Team Image' class='background-image' />
-        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 3:
@@ -36,24 +35,24 @@ function showDetails(stepNumber) {
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/teamwork_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;;font-size: 40px;'>${details}</p>
+        <p class='step-text'style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 4:
-      details = "Problem statement will be provided to individual team and they work on that basis";
+      details =
+        "Problem statement will be provided to individual team and they work on that basis";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/project_image.png' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 5:
-      details =
-        "Evaluation and Awards will be given at the END";
+      details = "Evaluation and Awards will be given at the END";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/awards_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     default:
@@ -104,3 +103,28 @@ let x = setInterval(function () {
     document.getElementById("seconds").innerHTML = "00";
   }
 }, 1000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  let duration = 5000;
+  let scrollInterval = 60;
+
+  
+
+  function autoScroll() {
+    let totalHeight = document.body.scrollHeight;
+    window.scrollTo({
+      top: totalHeight,
+      behavior: "smooth",
+    });
+
+    setTimeout(function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, duration);
+  }
+
+  autoScroll();
+  setInterval(autoScroll, duration + autoScroll);
+});

@@ -18,7 +18,7 @@ header {
 .background-images {
   width: 100%;
   height: 100%;
-  filter: brightness(50%);
+  filter: brightness(40%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,7 +204,7 @@ section h2 {
   border-radius: 50%;
   background-color: #cf0aa1;
   box-shadow: #0cad8b;
-  color: #06b0d6;
+  color: #010d10;
   margin: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -224,7 +224,8 @@ section h2 {
   padding: 20px;
   border: 2px solid #2c3e50;
   border-radius: 10px;
-  background-color: #bee3ef;
+  background-color: #e6e6fa;
+  box-shadow: 0 0 10px #f504ed;
   color: #2c3e50;
   position: relative;
   z-index: 2;
@@ -272,7 +273,7 @@ section h2 {
 section p {
   font-size: 3rem;
   line-height: 1.6;
-  color: #0bc7ed;
+  color: #0db4d6;
 }
 
 .button {
@@ -313,3 +314,164 @@ section p {
 .content h1 span {
   color: #ff3753;
 }
+
+/* Extra small devices (phones, portrait) */
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header {
+    height: 70vh;
+  }
+
+  .header-content h2 {
+    font-size: 30px;
+  }
+
+  nav a {
+    padding: 10px 20px;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .step {
+    width: 100px;
+    height: 100px;
+    font-size: 1.2em;
+  }
+
+  /* Add more styles for other elements as needed */
+}
+
+/* Small devices (phones, landscape, tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  header {
+    height: 80vh;
+  }
+
+  .header-content h2 {
+    font-size: 40px;
+  }
+
+  nav a {
+    padding: 15px 25px;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  .step {
+    width: 120px;
+    height: 120px;
+    font-size: 1.4em;
+  }
+
+  /* Add more styles for other elements as needed */
+}
+
+/* Medium devices (tablets, landscape) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 18px;
+    padding: 30px;
+  }
+
+  header {
+    height: 90vh;
+  }
+
+  .header-content h2 {
+    font-size: 50px;
+  }
+
+  nav a {
+    padding: 20px 30px;
+  }
+
+  section h2 {
+    font-size: 3rem;
+  }
+
+  .step {
+    width: 150px;
+    height: 150px;
+    font-size: 1.6em;
+  }
+
+  /* Add more styles for other elements as needed */
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  .header-content h2 {
+    font-size: 60px;
+  }
+
+  nav a {
+    padding: 25px 35px;
+  }
+
+  section h2 {
+    font-size: 3.5rem;
+  }
+
+  .step {
+    width: 180px;
+    height: 180px;
+    font-size: 1.8em;
+  }
+
+  /* Add more styles for other elements as needed */
+}
+
+/* Extra large devices (large desktops) */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 22px;
+    padding: 50px;
+  }
+
+  header {
+    height: 110vh;
+  }
+
+  .header-content h2 {
+    font-size: 70px;
+  }
+
+  nav a {
+    padding: 30px 40px;
+  }
+
+  section h2 {
+    font-size: 4rem;
+  }
+
+  .step {
+    width: 200px;
+    height: 200px;
+    font-size: 2em;
+  }
+
+  /* Add more styles for other elements as needed */
+}
+

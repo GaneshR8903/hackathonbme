@@ -1,43 +1,50 @@
 body {
   font-family: "Times New Roman", sans-serif;
-  line-height: 1.6;
+  line-height: 2.6;
   margin: 0;
   padding: 0;
-  animation: rollIn 1.5s ease-out;
   overflow: auto;
   scroll-behavior: smooth;
 }
 
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: contrast(-80%);
+.background_image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
 }
 
-.header-background {
+.header_background {
   position: relative;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.header-content {
+.header_content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #e6e9e6;
+  color: #086fdd;
+  text-shadow: 0 0 10px #e75480;
+  font-size: 20px;
 }
 
 header h1 {
   font-size: 4rem;
   margin-bottom: 20px;
-  font-family: "Brush Script m7", script;
+  font-family: "Brush Script m7", cursive;
   text-transform: uppercase;
   position: relative;
   font-style: oblique;
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   color: #c6ed18;
   text-shadow: 0 0 10px rgba(157, 0, 255, 1), 0 0 10px rgba(157, 0, 255, 1);
 }
@@ -56,34 +63,35 @@ header h1::before {
   transition: opacity 0.3s ease-in-out;
 }
 
-.header-content h2,
-.header-content h1,
-.header-content p {
+.header_content h2,
+.header_content h1,
+.header_content p {
   margin: 0;
 }
 
-header p {
-  font-size: 2.5rem;
+p.header {
+  font-size: 10px;
   margin-bottom: 30px;
-  color: #930f23;
+  color: #0bebf3;
 }
 
-.start-button {
+.start_button {
   display: inline-block;
-  padding: 20px 40px;
-  font-size: 40%;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   background-color: #091c2f;
   color: #fff;
   text-shadow: 0 0 10px #0ff;
   box-shadow: 0 0 10px #0ff;
   text-decoration: none;
   border-radius: 10px;
-  transition: color 0.3s ease;
+  size: 80%;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 30px;
 }
 
-.start-button:hover {
-  background-color: #091c2f;
+.start_button:hover {
+  background-color: #0d2c47;
   color: #87ceed;
   text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #e75480,
     0 0 50px #e75480;
@@ -113,11 +121,6 @@ header p {
   animation: fadeOut 1s ease-in-out forwards;
   opacity: 0;
   background-color: black;
-  animation: rollIn 0.5s ease-out;
-  overflow: auto;
-  scroll-behavior: smooth;
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -134,105 +137,125 @@ header p {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .background-image {
+@media (max-width: 480px) {
+  .background_image {
     object-fit: cover;
     background-image: cover;
     position: fixed;
 
-    
+    height: 100vh;
+    width: 100vw;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .start_button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .background_image {
+    object-fit: cover;
+    background-image: cover;
+    position: fixed;
+
     height: 100vh;
     width: 100vw;
   }
 
-  h1.header-content {
+  h1.header {
     position: absolute;
-    top: -20px;
-    font-size: 20%;
+    font-size: 4rem;
+    top: -80%;
   }
-
-  p.header-content {
-    position: absolute;
-    font-size: 10%;
-  }
-
-  .start-button {
-    font-size: 50%;
-    position: inherit;
-    aspect-ratio: 30/10;
-    height: 10px;
-  }
-}
-@media (min-width: 481px) and (max-width: 767px) {
-  .background-image {
-    object-fit: cover;
-  }
-
-  header h1 {
-    font-size: 3rem;
-  }
-
-  header p {
+  h2.header {
+    position: fixed;
     font-size: 2rem;
   }
 
-  .start-button {
-    font-size: 1.5rem;
-    padding: 15px 30px;
+  p.header {
+    position: absolute;
+    font-size: 2rem;
+  }
+
+  .start_button {
+    font-size: 40%;
+    position: inherit;
+    aspect-ratio: 0/10;
+    height: 40px;
   }
 }
 
-@media (max-width: 600px) {
-  .background-image {
+@media (min-width: 768px) and (max-width: 991px) {
+  .background_image {
     object-fit: cover;
-  }
+    background-image: cover;
+    position: fixed;
 
+    height: 100vh;
+    width: 100vw;
+  }
   header h1 {
     font-size: 3.5rem;
   }
-
   header p {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+  }
+  .start_button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .background-image {
+    object-fit: cover;
+    background-image: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
-  .start-button {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  header p {
     font-size: 1.75rem;
-    padding: 18px 35px;
+  }
+
+  .start_button {
+    font-size: 1.4rem;
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 1200px) {
   .background-image {
     object-fit: cover;
+    background-image: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   header h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   header p {
-    font-size: 2.5rem;
-  }
-
-  .start-button {
     font-size: 2rem;
-    padding: 20px 40px;
-  }
-}
-@media (max-width: 1200px) {
-  .background-image {
-    object-fit: cover;
-  }
-  header h1 {
-    font-size: 6rem;
   }
 
-  header p {
-    font-size: 4rem;
-  }
-
-  .start-button {
-    font-size: 4rem;
-    padding: 25px 50px;
+  .start_button {
+    font-size: 1.5rem;
   }
 }

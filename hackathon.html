@@ -120,6 +120,26 @@
       <p>Email: bme@gmail.com</p>
       <p>Phone: 9150164757,8870369266</p>
     </section>
+    
+    <script>
+      let scrollingContainer = document.getElementById('scrollingContainer');
+      let content = document.getElementById('content');
+      function autoScroll() {
+          scrollingContainer.scrollTop += 1; // Adjust the speed of scrolling by changing the value
+      }
+
+      // Call the autoScroll function every specified interval
+      let scrollInterval = setInterval(autoScroll, 50); // Adjust the interval based on scrolling speed
+
+      // Stop auto-scrolling when the user interacts with the scrolling container
+      scrollingContainer.addEventListener('mouseover', function() {
+          clearInterval(scrollInterval);
+      });
+
+      scrollingContainer.addEventListener('mouseout', function() {
+          scrollInterval = setInterval(autoScroll, 50);
+      });
+  </script>
 
     <script src="js/hackathon.js"></script>
   </body>

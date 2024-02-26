@@ -16,15 +16,15 @@ function showDetails(stepNumber) {
   switch (stepNumber) {
     case 1:
       details =
-        "Registration starts at 1:00 pm followed by the Opening Ceremony at 2:00 pm.";
+        "Registration Ends at 12/03/2024.";
       detailsContainer.innerHTML = `
         <div class='step-with-image'>
           <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
-          <p class='step-text' style='color: #000;font-size: 40px;'>${details}</p>
+          <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
         </div>`;
       break;
     case 2:
-      details = "Team Formation and Idea Pitches start at 3:00 pm.";
+      details = "Assessment will be updated";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/Teamsmall_image.jpg' alt='Team Image' class='background-image' />
@@ -32,28 +32,28 @@ function showDetails(stepNumber) {
       </div>`;
       break;
     case 3:
-      details = "Workshop and Mentoring Sessions at 8:00 pm.";
+      details = "Team formation based on your assessment";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/teamwork_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color: #000;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 4:
-      details = "Project Submission starts at 10:00 am.";
+      details = "Problem statement will be provided to individual team and they work on that basis";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/project_image.png' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color: #000;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 5:
       details =
-        "Judging and Evaluation begin at 11:00 am followed by the Awards at 12:00 pm.";
+        "Evaluation and Awards will be given at the END";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/awards_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color: #000;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#FFFF;text-shadow:0 0 10px #fc6c85;;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     default:
@@ -72,3 +72,35 @@ function showDetails(stepNumber) {
     clickedStep.classList.add("active");
   }
 }
+
+function formatTime(value) {
+  return value < 10 ? "0" + value : value;
+}
+
+let countDownDate = new Date("March 27, 2024 13:00:00").getTime();
+let x = setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+
+  let days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
+  let hours = formatTime(
+    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  );
+  let minutes = formatTime(
+    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  );
+  let seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+  }
+}, 1000);

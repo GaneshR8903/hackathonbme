@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biomedical Engineering Hackathon</title>
     <link rel="stylesheet" href="css/hackathon.css" />
+    <style>
+      section {
+        background: url('images/section_image.jpg') center/cover no-repeat fixed;
+      }
+    </style>
   </head>
 
   <body id="main-content">
-    <div
+    <div 
       class="background-images"
       style="
         background: url('images/background_image.jpg') center/cover no-repeat
           fixed;
       "
-    ></div>
+    >
+    
+      </div>
     <header>
       <div class="header-content">
         <h1>Biomedical Engineering Hackathon</h1>
@@ -43,45 +50,15 @@
           <p>SCHWAN TECH 2K24 Hackathon Event!</p>
         </div>
         <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#register">Register</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       </div>
     </header>
-
-    <script>
-      function formatTime(value) {
-        return value < 10 ? "0" + value : value;
-      }
-    
-      var countDownDate = new Date("March 27, 2024 13:00:00").getTime();
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-    
-        var days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
-        var hours = formatTime(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-        var minutes = formatTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-        var seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
-    
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-    
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("days").innerHTML = "00";
-          document.getElementById("hours").innerHTML = "00";
-          document.getElementById("minutes").innerHTML = "00";
-          document.getElementById("seconds").innerHTML = "00";
-        }
-      }, 1000);
-    </script>
 
     <section id="about">
       <h2>About</h2>
@@ -103,38 +80,37 @@
       </p>
     </section>
 
-    <section id="schedule">
+    <section id="schedule" style="background: url('images/section_image.jpg')">
       <h2>Schedule</h2>
       <img src="images/schedule_image.jpg" alt="About Content" />
       <div class="flow-path">
         <div class="step" onclick="showDetails(1)" data-step="1">
-          Registration and Opening Ceremony
+          Registration 
         </div>
         <div class="step" onclick="showDetails(2)" data-step="2">
-          Team Formation and Idea Pitches
+          Assessment
         </div>
         <div class="step" onclick="showDetails(3)" data-step="3">
-          Workshop, and Mentoring Sessions
+          Team Formation
         </div>
         <div class="step" onclick="showDetails(4)" data-step="4">
-          Project Submission
+          Project Work
         </div>
         <div class="step" onclick="showDetails(5)" data-step="5">
-          Judging, Evaluation and Awards
+         Evaluation and Awards
         </div>
       </div>
-      <div id="details-container">
-        <!-- Details for each step will be displayed here -->
-      </div>
+      <div id="details-container"></div>
     </section>
 
     <section id="register">
-      <h2>Register</h2>
+      <h2>Register </h2>
       <img src="images/register_image.jpg" alt="Register" />
       <p>
         Ready to join the Biomedical Engineering Hackathon? Register now to
         secure your spot and start brainstorming your innovative solution!
       </p>
+      <h2>Last Date to Register:12/03/2024</h2>
       <button id="registerButton" class="button">Register Now</button>
     </section>
 
@@ -142,8 +118,7 @@
       <h2>Contact Us</h2>
       <p>If you have any questions or queries, feel free to reach out to us.</p>
       <p>Email: bme@gmail.com</p>
-      <p>Phone: +91 1234567890</p>
-      <!-- You can add more contact details as needed -->
+      <p>Phone: 9150164757,8870369266</p>
     </section>
 
     <script src="js/hackathon.js"></script>

@@ -21,8 +21,6 @@ body {
   overflow: hidden;
 }
 
-
-
 .header-content {
   position: absolute;
   top: 50%;
@@ -73,7 +71,7 @@ header p {
 .start-button {
   display: inline-block;
   padding: 20px 40px;
-  font-size: 2rem;
+  font-size: 40%;
   background-color: #091c2f;
   color: #fff;
   text-shadow: 0 0 10px #0ff;
@@ -125,8 +123,6 @@ header p {
 
 .fade-out {
   transition: opacity 1s ease;
- 
-
 }
 
 @keyframes fadeOut {
@@ -141,19 +137,30 @@ header p {
 @media (min-width: 320px) and (max-width: 480px) {
   .background-image {
     object-fit: cover;
+    background-image: cover;
+    position: fixed;
+
+    
+    height: 100vh;
+    width: 100vw;
   }
 
-  header h1 {
-    font-size: 2rem;
+  h1.header-content {
+    position: absolute;
+    top: -20px;
+    font-size: 20%;
   }
 
-  header p {
-    font-size: 1.5rem;
+  p.header-content {
+    position: absolute;
+    font-size: 10%;
   }
 
   .start-button {
-    font-size: 1.5rem;
-    padding: 15px 25px;
+    font-size: 50%;
+    position: inherit;
+    aspect-ratio: 30/10;
+    height: 10px;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {

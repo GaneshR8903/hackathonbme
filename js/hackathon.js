@@ -19,7 +19,7 @@ function showDetails(stepNumber) {
       detailsContainer.innerHTML = `
         <div class='step-with-image'>
           <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
-          <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
+          <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
         </div>`;
       break;
     case 2:
@@ -27,7 +27,7 @@ function showDetails(stepNumber) {
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/Teamsmall_image.jpg' alt='Team Image' class='background-image' />
-        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 3:
@@ -35,24 +35,23 @@ function showDetails(stepNumber) {
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/teamwork_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text'style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text'style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 4:
-      details =
-        "Problem statement will be provided to individual team and they work on that basis";
+      details = "Work on the basis of problem statement";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/project_image.png' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     case 5:
-      details = "Evaluation and Awards will be given at the END";
+      details = "Awards will be given on the performance basis.";
       detailsContainer.innerHTML = `
       <div class='step-with-image'>
         <img src='images/awards_image.jpg' alt='Workshop Image' class='background-image' />
-        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
+        <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
       </div>`;
       break;
     default:
@@ -72,59 +71,37 @@ function showDetails(stepNumber) {
   }
 }
 
-function formatTime(value) {
-  return value < 10 ? "0" + value : value;
-}
+(function () {
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
-let countDownDate = new Date("March 27, 2024 13:00:00").getTime();
-let x = setInterval(function () {
-  let now = new Date().getTime();
-  let distance = countDownDate - now;
+  const targetDate = new Date("March 27, 2024 13:00:00").getTime();
 
-  let days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
-  let hours = formatTime(
-    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  );
-  let minutes = formatTime(
-    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  );
-  let seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
+  const formatNumber = (number) => (number < 10 ? `0${number}` : number);
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+  const updateCountdown = () => {
+    const now = new Date().getTime(),
+      distance = targetDate - now;
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("days").innerHTML = "00";
-    document.getElementById("hours").innerHTML = "00";
-    document.getElementById("minutes").innerHTML = "00";
-    document.getElementById("seconds").innerHTML = "00";
-  }
-}, 1000);
+    const days = Math.floor(distance / day),
+      hours = Math.floor((distance % day) / hour),
+      minutes = Math.floor((distance % hour) / minute),
+      seconds = Math.floor((distance % minute) / second);
 
-document.addEventListener("DOMContentLoaded", function () {
-  let duration = 5000;
-  let scrollInterval = 60;
+    // Output the countdown data
+    document.getElementById("days").innerText = formatNumber(days);
+    document.getElementById("hours").innerText = formatNumber(hours);
+    document.getElementById("minutes").innerText = formatNumber(minutes);
+    document.getElementById("seconds").innerText = formatNumber(seconds);
 
-  
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "STARTED";
+    }
+  };
 
-  function autoScroll() {
-    let totalHeight = document.body.scrollHeight;
-    window.scrollTo({
-      top: totalHeight,
-      behavior: "smooth",
-    });
-
-    setTimeout(function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, duration);
-  }
-
-  autoScroll();
-  setInterval(autoScroll, duration + autoScroll);
-});
+  const x = setInterval(updateCountdown, 1000);
+  updateCountdown();
+})();

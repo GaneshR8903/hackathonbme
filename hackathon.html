@@ -3,64 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biomedical Engineering Hackathon</title>
+    <title>SCHWAN TECH 2K24 Hackathon</title>
     <link rel="stylesheet" href="css/hackathon.css" />
-    <style>
-      section {
-        background: url('images/section_image.jpg') center/cover no-repeat fixed;
-      }
-    </style>
   </head>
 
-  <body id="main-content">
-    <div 
-      class="background-images"
-      style="
-        background: url('images/background_image.jpg') center/cover no-repeat
-          fixed;
-      "
-    >
-    
-      </div>
+  <body>
     <header>
       <div class="header-content">
-        <h1>Biomedical Engineering Hackathon</h1>
-        <h2>Arriving soon</h2>
-        <br /><br />
-        <div class="launch-time">
-          <div class="timer-box">
-            <p id="days">00</p>
-            <span>Days</span>
-          </div>
-          <div class="timer-box">
-            <p id="hours">00</p>
-            <span>Hours</span>
-          </div>
-          <div class="timer-box">
-            <p id="minutes">00</p>
-            <span>Minutes</span>
-          </div>
-          <div class="timer-box">
-            <p id="seconds">00</p>
-            <span>Seconds</span>
-          </div>
-        </div>
-        <div class="contents">
-          <br /><br /><br /><br />
-          <p>SCHWAN TECH 2K24 Hackathon Event!</p>
-        </div>
         <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#register">Register</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contents">
+        <h1>Biomedical Engineering Hackathon</h1>
+        <p>SCHWAN TECH 2K24 Hackathon Event!</p>
+      </div>
+      <div class="timer">
+        <div class="container">
+          <h1 id="headline1">Get Ready Guys</h1>
+          <h1 id="headline">Mark your Calendar, boys and girls</h1>
+          <div id="countdown">
+            <div class="countdown-box">
+              <span id="days"></span>
+              <p>Days</p>
+            </div>
+            <div class="countdown-box">
+              <span id="hours"></span>
+              <p>Hours</p>
+            </div>
+            <div class="countdown-box">
+              <span id="minutes"></span>
+              <p>Minutes</p>
+            </div>
+            <div class="countdown-box">
+              <span id="seconds"></span>
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <section id="about">
+    <section id="about" style="background: url('images/section_image.jpg')">
       <h2>About</h2>
       <video controls poster="images/about_image.jpg">
         <source src="videos/about_video.mp4" type="video/mp4" />
@@ -85,26 +74,26 @@
       <img src="images/schedule_image.jpg" alt="About Content" />
       <div class="flow-path">
         <div class="step" onclick="showDetails(1)" data-step="1">
-          Registration 
+          Registration
         </div>
         <div class="step" onclick="showDetails(2)" data-step="2">
           Assessment
         </div>
         <div class="step" onclick="showDetails(3)" data-step="3">
-          Team Formation
+          Trooping
         </div>
         <div class="step" onclick="showDetails(4)" data-step="4">
           Project Work
         </div>
         <div class="step" onclick="showDetails(5)" data-step="5">
-         Evaluation and Awards
+           Awards
         </div>
       </div>
       <div id="details-container"></div>
     </section>
 
-    <section id="register">
-      <h2>Register </h2>
+    <section id="register" style="background: url('images/section_image.jpg')">
+      <h2>Register</h2>
       <img src="images/register_image.jpg" alt="Register" />
       <p>
         Ready to join the Biomedical Engineering Hackathon? Register now to
@@ -114,33 +103,12 @@
       <button id="registerButton" class="button">Register Now</button>
     </section>
 
-    <section id="contact">
+    <section id="contact" style="background: url('images/section_image.jpg')">
       <h2>Contact Us</h2>
       <p>If you have any questions or queries, feel free to reach out to us.</p>
       <p>Email: bme@gmail.com</p>
       <p>Phone: 9150164757,8870369266</p>
     </section>
-    
-    <script>
-      let scrollingContainer = document.getElementById('scrollingContainer');
-      let content = document.getElementById('content');
-      function autoScroll() {
-          scrollingContainer.scrollTop += 1; // Adjust the speed of scrolling by changing the value
-      }
-
-      // Call the autoScroll function every specified interval
-      let scrollInterval = setInterval(autoScroll, 50); // Adjust the interval based on scrolling speed
-
-      // Stop auto-scrolling when the user interacts with the scrolling container
-      scrollingContainer.addEventListener('mouseover', function() {
-          clearInterval(scrollInterval);
-      });
-
-      scrollingContainer.addEventListener('mouseout', function() {
-          scrollInterval = setInterval(autoScroll, 50);
-      });
-  </script>
-
     <script src="js/hackathon.js"></script>
   </body>
 </html>

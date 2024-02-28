@@ -18,7 +18,7 @@ function showDetails(stepNumber) {
       details = "Registration Ends at 12/03/2024.";
       detailsContainer.innerHTML = `
         <div class='step-with-image'>
-          <img src='images/register1_image.jpg' alt='Registration Image' class='background-image' />
+          <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
           <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85,0 0 20px #fc6c85;font-size: 40px;'>${details}</p>
         </div>`;
       break;

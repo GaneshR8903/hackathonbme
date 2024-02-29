@@ -122,11 +122,9 @@ p.header {
   opacity: 0;
   background-color: black;
   background-repeat: no-repeat;
+  transition: opacity 1.5s ease;
 }
 
-.fade-out {
-  transition: opacity 1s ease;
-}
 
 @keyframes fadeOut {
   0% {

@@ -160,7 +160,7 @@ header h1.glow {
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
   color: #00ff00;
-  text-shadow: 0 0 10px #00ff00; /* Neon Green */
+  text-shadow: 0 0 10px #00ff00;
 }
 
 header img.start-image {
@@ -397,6 +397,9 @@ section p {
   .contents h1 {
     font-size: 2rem;
     margin-top: 30%;
+  }
+  #headline1 {
+    margin-top: 10%;
   }
 }
 

@@ -478,3 +478,39 @@ section p {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/background_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 22px;
+    padding: 40px;
+    animation: rollIn 1.5s ease-out;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    height: 110vh;
+  }
+
+  .header-content h2 {
+    font-size: 60px;
+  }
+
+  nav a {
+    padding: 25px 30px;
+  }
+
+  section h2 {
+    font-size: 3.5rem;
+  }
+
+  .step {
+    width: 200px;
+    height: 200px;
+    font-size: 2em;
+  }
+}

@@ -106,22 +106,6 @@
       <p>Email: bme@gmail.com</p>
       <p>Phone: 9150164757,8870369266</p>
     </section>
-    <script>
-      function storeScrollPosition() {
-        sessionStorage.setItem("scrollPosition", window.scrollY);
-      }
-
-      function restoreScrollPosition() {
-        const scrollPosition = sessionStorage.getItem("scrollPosition");
-        if (scrollPosition) {
-          window.scrollTo(0, parseInt(scrollPosition));
-        }
-      }
-
-      window.addEventListener("beforeunload", storeScrollPosition);
-
-      document.addEventListener("DOMContentLoaded", restoreScrollPosition);
-    </script>
     <script src="js/hackathon.js"></script>
   </body>
 </html>

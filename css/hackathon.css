@@ -323,9 +323,17 @@ section p {
 
 @media only screen and (max-width: 575px) {
   body {
-    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
+    background-image: url("/images/background_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 14px;
     padding: 3px;
+    margin: 0;
+    animation: rollIn 1.5s ease-out;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   header {
@@ -394,9 +402,17 @@ section p {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
-    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
+    background-image: url("/images/background_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 18px;
     padding: 20px;
+    margin: 0;
+    animation: rollIn 1.5s ease-out;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   header {
@@ -424,13 +440,23 @@ section p {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
-    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
+    background-image: url("/images/background_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 20px;
     padding: 30px;
+    margin: 0;
+    animation: rollIn 1.5s ease-out;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   header {
     height: 100vh;
+    text-align: center;
+    padding-top: 20%;
   }
 
   .header-content h2 {
@@ -454,9 +480,16 @@ section p {
 
 @media only screen and (min-width: 1200px) {
   body {
-    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
+    background-image: url("/images/background_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 22px;
     padding: 40px;
+    animation: rollIn 1.5s ease-out;
+    overflow: auto;
+    scroll-behavior: smooth;
   }
 
   header {

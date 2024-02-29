@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCHWAN TECH 2K24 Hackathon</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/hackathon.css" />
   </head>
 
@@ -79,15 +80,11 @@
         <div class="step" onclick="showDetails(2)" data-step="2">
           Assessment
         </div>
-        <div class="step" onclick="showDetails(3)" data-step="3">
-          Trooping
-        </div>
+        <div class="step" onclick="showDetails(3)" data-step="3">Trooping</div>
         <div class="step" onclick="showDetails(4)" data-step="4">
           Project Work
         </div>
-        <div class="step" onclick="showDetails(5)" data-step="5">
-           Awards
-        </div>
+        <div class="step" onclick="showDetails(5)" data-step="5">Awards</div>
       </div>
       <div id="details-container"></div>
     </section>
@@ -109,6 +106,22 @@
       <p>Email: bme@gmail.com</p>
       <p>Phone: 9150164757,8870369266</p>
     </section>
+    <script>
+      function storeScrollPosition() {
+        sessionStorage.setItem("scrollPosition", window.scrollY);
+      }
+
+      function restoreScrollPosition() {
+        const scrollPosition = sessionStorage.getItem("scrollPosition");
+        if (scrollPosition) {
+          window.scrollTo(0, parseInt(scrollPosition));
+        }
+      }
+
+      window.addEventListener("beforeunload", storeScrollPosition);
+
+      document.addEventListener("DOMContentLoaded", restoreScrollPosition);
+    </script>
     <script src="js/hackathon.js"></script>
   </body>
 </html>

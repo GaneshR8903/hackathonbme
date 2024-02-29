@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
       showDetails(stepNumber);
     }
   }
-  let x;
 });
 
 function showDetails(stepNumber) {

@@ -189,11 +189,11 @@ header img.start-image {
 
 section {
   text-align: center;
-  padding: 40px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-  margin-bottom: 50px;
-  min-height: 500px;
+  margin-bottom: 60px;
+  min-height: 600px;
 }
 
 section img {
@@ -377,6 +377,7 @@ section p {
 
   nav {
     text-align: right;
+    flex-direction: column;
   }
 
   nav ul {
@@ -405,9 +406,12 @@ section p {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     color: #06e7dc;
   }
-
+  .timer {
+    padding: 1px;
+    flex-direction: column;
+  }
   section {
-    padding: 20px;
+    padding: 5px;
     margin-bottom: 20px;
   }
 

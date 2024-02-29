@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   document.body.classList.add("loaded");
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const stepNumber = parseInt(hash);
+    if (!isNaN(stepNumber)) {
+      showDetails(stepNumber);
+    }
+  }
+  let x;
 });
 
 function showDetails(stepNumber) {
@@ -58,6 +66,7 @@ function showDetails(stepNumber) {
       details = "Details not available.";
       detailsContainer.innerHTML = `<p style='color: green;'>${details}</p>`;
   }
+  document.location.hash = stepNumber;
 
   document.querySelectorAll(".step").forEach((step) => {
     step.classList.remove("active");

@@ -416,7 +416,9 @@ section p {
   }
 
   header {
-    height: 90vh;
+    height: auto;
+    text-align: center;
+    margin-top: 20%;
   }
 
   .header-content h2 {
@@ -454,7 +456,7 @@ section p {
   }
 
   header {
-    height: 100vh;
+    height: auto;
     text-align: center;
     padding-top: 20%;
   }
@@ -493,7 +495,9 @@ section p {
   }
 
   header {
-    height: 110vh;
+    height: auto;
+    text-align: center;
+    margin-top: 20%;
   }
 
   .header-content h2 {

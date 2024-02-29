@@ -323,6 +323,7 @@ section p {
 
 @media only screen and (max-width: 575px) {
   body {
+    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
     font-size: 14px;
     padding: 3px;
   }
@@ -389,12 +390,11 @@ section p {
     font-size: 2rem;
     margin-top: 30%;
   }
-
-  
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
+    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
     font-size: 18px;
     padding: 20px;
   }
@@ -424,6 +424,7 @@ section p {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
+    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
     font-size: 20px;
     padding: 30px;
   }
@@ -453,6 +454,7 @@ section p {
 
 @media only screen and (min-width: 1200px) {
   body {
+    background: url("/images/background_image.jpg") center/cover no-repeat fixed;
     font-size: 22px;
     padding: 40px;
   }

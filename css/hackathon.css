@@ -234,9 +234,9 @@ section h2 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #0cad8b;
+  background-color: #049eb9;
   box-shadow: 0 0 10px #0cad8b;
-  color: #700667;
+  color: #f53232;
   margin: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -248,10 +248,10 @@ section h2 {
 }
 
 .step.active {
-  background-color: #185d69;
+  background-color: #122325;
 }
 
-#details-container {
+/* #details-container {
   margin-top: 40px;
   padding: 10px;
   border-radius: 10px;
@@ -281,6 +281,29 @@ section h2 {
   left: 0;
   z-index: 0;
   animation: slideBackground 3s linear infinite;
+} */
+
+.floating-message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #95f8e8;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #0ae71d;
+  color: #aa12e6;
+  z-index: 9999;
+  animation: fadeOut 5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes slideBackground {

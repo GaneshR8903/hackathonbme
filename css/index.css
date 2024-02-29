@@ -125,7 +125,6 @@ p.header {
   transition: opacity 1.5s ease;
 }
 
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -152,6 +151,9 @@ p.header {
   }
   .start_button {
     font-size: 1rem;
+  }
+  .click_image {
+    size-adjust: -50%;
   }
 }
 

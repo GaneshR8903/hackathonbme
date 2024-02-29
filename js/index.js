@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000); 
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const startButton = document.getElementById("start-button");
+  const clickImage = document.getElementById("click-image");
+
+  // startButton.addEventListener("click", function () {
+  //   clickImage.src = "images/click_image.png"; 
+  // });
+});
+
 
   
   document.body.classList.add("loaded");

@@ -18,7 +18,7 @@ header {
 
 nav {
   margin-top: -25%;
-  margin-left: 75%;
+  margin-left: 70%;
   transform: translateX(-50%);
 }
 
@@ -56,7 +56,7 @@ nav a:hover {
   color: #06f8c4;
   font-weight: bold;
   font-style: italic;
-  margin-bottom: -40px;
+  margin-top: 0%;
 }
 
 .contents p {
@@ -64,7 +64,8 @@ nav a:hover {
   font-weight: bold;
   text-align: center;
   font-size: 40px;
-  margin-bottom: 7%;
+  margin-top: -1%;
+  margin-bottom: 6%;
 }
 .timer {
   align-items: center;
@@ -116,17 +117,17 @@ h1 {
 }
 #headline {
   font-size: 40px;
-  padding: 5px;
-  margin-top: 5px;
-  color: #021a5a;
-  text-shadow: 3px 3px 3px #ff00ff;
+  padding: 2px;
+  margin-top: -5%;
+  color: #72060f;
+  text-shadow: 3px 3px 3px #05e9e9;
 }
 #headline1 {
   font-size: 40px;
   padding: 5px;
   margin-top: 5px;
   color: #01fd23;
-  text-shadow: 3px 3px 3px #ff00bf;
+  text-shadow: 3px 3px 30px #df05cc;
 }
 
 #headline1.glow {
@@ -357,7 +358,7 @@ section p {
     background-attachment: fixed;
     font-size: 14px;
     padding: 3px;
-    margin: 0;
+    margin: 10px;
     animation: rollIn 1.5s ease-out;
     overflow: auto;
     scroll-behavior: smooth;
@@ -376,21 +377,24 @@ section p {
   }
 
   nav {
-    text-align: right;
+    text-align: left;
     flex-direction: column;
+    padding: 0 5px;
   }
 
   nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
+    right: -40px;
+    margin-top: -10%;
   }
-
+  nav ul li {
+    margin: -40px -15px;
+  }
   nav a {
     display: block;
     padding: 10px 20px;
@@ -426,11 +430,11 @@ section p {
   }
 
   .contents h1 {
-    font-size: 2rem;
-    margin-top: 30%;
+    font-size: 2.5rem;
+    margin-top: 40%;
   }
   #headline1 {
-    margin-top: 10%;
+    margin-top: 20%;
   }
   .floating-message {
     font-size: 14px;

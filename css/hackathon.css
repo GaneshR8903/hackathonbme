@@ -48,6 +48,7 @@ nav a {
 
 nav a:hover {
   background-color: #06e7dc;
+  cursor: pointer;
 }
 
 .contents h1 {
@@ -245,6 +246,7 @@ section h2 {
 
 .step:hover {
   background-color: #2004f5;
+  cursor: pointer;
 }
 
 .step.active {
@@ -339,6 +341,7 @@ section p {
   border-radius: 10px;
   transition: background-color 0.3s ease;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -424,6 +427,19 @@ section p {
   }
   #headline1 {
     margin-top: 10%;
+  }
+  .floating-message {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

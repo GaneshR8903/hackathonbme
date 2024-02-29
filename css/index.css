@@ -92,6 +92,7 @@ p.header {
 
 .start_button:hover {
   background-color: #0d2c47;
+  cursor: pointer;
   color: #87ceed;
   text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #e75480,
     0 0 50px #e75480;

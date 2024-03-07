@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function showDetails(stepNumber) {
   if (stepNumber === 1) {
 
-    window.location.href = "#register";
+    window.location.href = "register.html";
   } else {
     let detailsContainer = document.getElementById("details-container");
     let details;

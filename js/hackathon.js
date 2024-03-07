@@ -20,79 +20,77 @@ document.addEventListener("DOMContentLoaded", function () {
 //   let detailsContainer = document.getElementById("details-container");
 //   let details;
 
-  // switch (stepNumber) {
-  //   case 1:
-  //     details = "Registration Ends at 12/03/2024.";
-  //     detailsContainer.innerHTML = `
-  //       <div class='step-with-image'>
-  //         <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
-  //         <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
-  //       </div>`;
-  //     break;
-  //   case 2:
-  //     details = "Assessments will be conducted from 13/03/2024 to 15/03/2024";
-  //     detailsContainer.innerHTML = `
-  //     <div class='step-with-image'>
-  //       <img src='images/Teamsmall_image.jpg' alt='Team Image' class='background-image' />
-  //       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
-  //     </div>`;
-  //     break;
-  //   case 3:
-  //     details = "Team formation based on your assessment";
-  //     detailsContainer.innerHTML = `
-  //     <div class='step-with-image'>
-  //       <img src='images/teamwork_image.jpg' alt='Workshop Image' class='background-image' />
-  //       <p class='step-text'style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
-  //     </div>`;
-  //     break;
-  //   case 4:
-  //     details = "Work on the basis of problem statement";
-  //     detailsContainer.innerHTML = `
-  //     <div class='step-with-image'>
-  //       <img src='images/project_image.png' alt='Workshop Image' class='background-image' />
-  //       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
-  //     </div>`;
-  //     break;
-  //   case 5:
-  //     details = "Awards will be given on the performance basis.";
-  //     detailsContainer.innerHTML = `
-  //     <div class='step-with-image'>
-  //       <img src='images/awards_image.jpg' alt='Workshop Image' class='background-image' />
-  //       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
-  //     </div>`;
-  //     break;
-  //   default:
-  //     details = "Details not available.";
-  //     detailsContainer.innerHTML = `<p style='color: green;'>${details}</p>`;
-  // }
-  // document.location.hash = stepNumber;
+// switch (stepNumber) {
+//   case 1:
+//     details = "Registration Ends at 12/03/2024.";
+//     detailsContainer.innerHTML = `
+//       <div class='step-with-image'>
+//         <img src='images/Registersmall_image.jpg' alt='Registration Image' class='background-image' />
+//         <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+//       </div>`;
+//     break;
+//   case 2:
+//     details = "Assessments will be conducted from 13/03/2024 to 15/03/2024";
+//     detailsContainer.innerHTML = `
+//     <div class='step-with-image'>
+//       <img src='images/Teamsmall_image.jpg' alt='Team Image' class='background-image' />
+//       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+//     </div>`;
+//     break;
+//   case 3:
+//     details = "Team formation based on your assessment";
+//     detailsContainer.innerHTML = `
+//     <div class='step-with-image'>
+//       <img src='images/teamwork_image.jpg' alt='Workshop Image' class='background-image' />
+//       <p class='step-text'style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+//     </div>`;
+//     break;
+//   case 4:
+//     details = "Work on the basis of problem statement";
+//     detailsContainer.innerHTML = `
+//     <div class='step-with-image'>
+//       <img src='images/project_image.png' alt='Workshop Image' class='background-image' />
+//       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+//     </div>`;
+//     break;
+//   case 5:
+//     details = "Awards will be given on the performance basis.";
+//     detailsContainer.innerHTML = `
+//     <div class='step-with-image'>
+//       <img src='images/awards_image.jpg' alt='Workshop Image' class='background-image' />
+//       <p class='step-text' style='color:#4b0082;text-shadow:0 0 10px #fc6c85;font-size: 40px;'>${details}</p>
+//     </div>`;
+//     break;
+//   default:
+//     details = "Details not available.";
+//     detailsContainer.innerHTML = `<p style='color: green;'>${details}</p>`;
+// }
+// document.location.hash = stepNumber;
 
-  
 function showDetails(stepNumber) {
   if (stepNumber === 1) {
-
-    window.location.href = "register.html";
+    window.location.href = "#register";
   } else {
     let detailsContainer = document.getElementById("details-container");
     let details;
 
-  switch (stepNumber) {
-    case 1:
-      details = "Registration Ends at 12/03/2024.";
-      break;
-    case 2:
-      details = "Assessments will be conducted from 13/03/2024 to 15/03/2024";
-      break;
-    case 3:
-      details = "Team formation based on your assessment";
-      break;
-    case 4:
-      details = "Work on the basis of problem statement";
-      break;
-    case 5:
-      details = "Awards will be given on the performance basis.";
-      break;
-   default:
+    switch (stepNumber) {
+      case 1:
+        details = "Registration Ends at 12/03/2024.";
+        break;
+      case 2:
+        details = "Assessments will be conducted from 13/03/2024 to 15/03/2024";
+        break;
+      case 3:
+        details = "Team formation based on your assessment";
+        break;
+      case 4:
+        details = "Work on the basis of problem statement";
+        break;
+      case 5:
+        details = "Awards will be given on the performance basis.";
+        break;
+      default:
         details = "Details not available.";
         detailsContainer.innerHTML = `<p style='color: green;'>${details}</p>`;
     }

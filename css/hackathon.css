@@ -441,6 +441,11 @@ section p {
     font-size: 14px;
     padding: 8px;
   }
+  video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 @keyframes fadeOut {
@@ -490,6 +495,11 @@ section p {
     height: 150px;
     font-size: 1.6em;
   }
+  video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -530,6 +540,11 @@ section p {
     height: 180px;
     font-size: 1.8em;
   }
+  video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -568,5 +583,10 @@ section p {
     width: 200px;
     height: 200px;
     font-size: 2em;
+  }
+  video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 }

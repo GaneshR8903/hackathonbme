@@ -318,6 +318,11 @@ section h2 {
     transform: translateX(100%);
   }
 }
+video {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
 
 .step-text {
   position: absolute;

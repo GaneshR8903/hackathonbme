@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 // function showDetails(stepNumber) {
 //   let detailsContainer = document.getElementById("details-container");
 //   let details;
@@ -108,17 +109,17 @@ function showDetails(stepNumber) {
       clickedStep.classList.add("active");
     }
 
-    // Floating message effect
+    
     if (stepNumber !== 1) {
       const floatingMessage = document.createElement("div");
       floatingMessage.className = "floating-message";
       floatingMessage.innerHTML = details;
       document.body.appendChild(floatingMessage);
 
-      // Remove the floating message after a delay
+      
       setTimeout(() => {
         floatingMessage.remove();
-      }, 5000); // Adjust the delay (in milliseconds) as needed
+      }, 5000); 
     }
   }
 }
@@ -128,7 +129,7 @@ function showDetails(stepNumber) {
     hour = minute * 60,
     day = hour * 24;
 
-  const targetDate = new Date("March 27, 2024 13:00:00").getTime();
+  const targetDate = new Date("March 08, 2024 13:00:00").getTime();
 
   const formatNumber = (number) => (number < 10 ? `0${number}` : number);
 

@@ -129,7 +129,7 @@ function showDetails(stepNumber) {
     hour = minute * 60,
     day = hour * 24;
 
-  const targetDate = new Date("March 08, 2024 13:00:00").getTime();
+  const targetDate = new Date("March 27, 2024 13:00:00").getTime();
 
   const formatNumber = (number) => (number < 10 ? `0${number}` : number);
 
